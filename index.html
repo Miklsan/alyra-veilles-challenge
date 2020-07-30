@@ -20,16 +20,36 @@
         <h1>Veilles EthersJs
         </h1>
     </header>
-    <main></main>
-    <footer class="bg-primary text-white py-4">
-        <div class="container text-center m-auto">
-            <h3 class="h6"> &copy; 2020 Made with <svg width="1em" height="1em" viewBox="0 0 16 16"
-                    class="bi bi-suit-heart-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
-                </svg> for Alyra </h3>
-        </div>
-    </footer>
+    <main>
+     <div class="input-group m-4">
+        <label for="filterTypes" class="input-group-type">
+   <div class = " mx-1 ">Catégories</div> 
+        </label>
+
+        <select id="filterTypes" name="filterTypes" class="category-select">
+          <option value="toutes les categories" selected>Toutes les catégories</option>
+          <option value="nav-web">Navigateur Web</option>
+          <option value="methodologie">Méthodologie</option> 
+          <option value="culture-web">Culture Web</option> 
+          <option value="dev">Dev</option> 
+          <option value="technologie">Technologie</option> 
+          <option value="web">Web</option> 
+          <option value="culture-tech">Culture Tech</option> 
+          <option value="dev-web">Dev Web</option> 
+          <option value="culture">Culture</option> 
+          <option value="blockchain">Blockchain</option> 
+          <option value="Dev-BC">Dev BC</option> 
+          <option value="conception">Conception</option> 
+          <option value="entrepreunariat">Entrepreunariat</option> 
+          <option value="securite-web">Sécurité Web</option> 
+          <option value="conception">Conception</option> 
+          
+
+        </select>
+           
+    
+    </div>
+   </main>
     <!--charge les deux feuilles JS-->
     <script src="js/veilles.js"></script>
     <script src="js/script.js"></script>
@@ -44,6 +64,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
         integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
         crossorigin="anonymous"></script>
+
+        
 </body>
+<footer class="bg-primary text-white py-4">
+    <div class="container text-center m-auto">
+        <h3 class="h6"> &copy; 2020 Made with <svg width="1em" height="1em" viewBox="0 0 16 16"
+                class="bi bi-suit-heart-fill" fill="red" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z" />
+            </svg> for Alyra </h3>
+    </div>
+</footer>
 
 </html>
