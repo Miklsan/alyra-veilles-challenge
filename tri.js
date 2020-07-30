@@ -2,7 +2,7 @@
 
 // Invoquer la structure html
 Document.documentElement
-Document.documentElement.lang("fr")
+Document.documentElement.lang("fr-FR")
 
 // Déclarer les listes =>
 // Liste de A à Z
@@ -10,7 +10,7 @@ const ListedesVeillesAZ = entries.subject.sort()
 console.log(ListedesVeillesAZ)
 
 // Liste de Z à A
-const ListedesVeillesZA = entries.subject.reverse().sort()
+const ListedesVeillesZA = entries.subject.sort().reverse()
 console.log(ListedesVeillesZA)
 
 
