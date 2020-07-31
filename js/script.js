@@ -55,37 +55,13 @@
     }
     insertVeille()
 
-
-    /*function activateFilterByDate() {
-        const selectDa = document.getElementById("filterDate")
-       
-        uniqueCategoryDa.sort()
-
-    
-        for (let date of uniqueCategoryDa) {
-            const option = document.createElement("option")
-            option.textContent = date
-            option.value = date
-            selectDa.append(option)
-        }
-        selectDa.addEventListener("change", () => {
-            filterEntries = selectDa.value
-            insertVeille()
-            console.log(filterEntries)
-        })
-    }
-    
-    activateFilterByDate()*/
-    
     function activateFilterByCategory() {
         const selectCa = document.getElementById("filterCategory")
-       
-        uniqueCategory.sort()
+               uniqueCategory.sort()
         //console.log(uniqueCategory)
         //renvoie les 17 différentes catégories
     
-    
-        for (let category of uniqueCategory) {
+            for (let category of uniqueCategory) {
             const option = document.createElement("option")
             option.textContent = category
             option.value = category
@@ -97,6 +73,28 @@
             console.log(filterEntries)
         })
     }
+        activateFilterByCategory()
+
+
+    function activateFilterByDate() {
+        const selectDa = document.getElementById("filterDate")
+        uniqueCategory1.sort()
+
     
-    activateFilterByCategory()
+        for (let date of uniqueCategory1) {
+            const option = document.createElement("option")
+            option.textContent = date
+            option.value = date
+            selectDa.append(option)
+        }
+        selectDa.addEventListener("change", () => {
+            filterEntries = selectDa.value
+            insertVeille()
+            console.log(filterEntries1)
+        })
+    }
+    
+    activateFilterByDate()
+    
+ 
     

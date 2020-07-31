@@ -87,7 +87,6 @@ const entries = [
 
 
 function allCategories(list) {
-
   let listTotal = []
   for (let element of list) {
     if ("category" in element) {
@@ -103,5 +102,25 @@ function allCategories(list) {
   })
   return listCategoryUnique
 }
-
 const uniqueCategory = allCategories(entries) 
+
+
+function allCategories1(lista) {
+
+  let listTotale = []
+  for (let element1 of lista) {
+    if ("date" in element1) {
+      listTotale = listTotale.concat(element1.date)
+    }
+  }
+  const listCategoryUnique1 = []
+  listTotale.forEach((elDa) => {
+    if (!listCategoryUnique1.includes(elDa)) {
+ 
+      listCategoryUnique1.push(elDa)
+    }
+  })
+  return listCategoryUnique1
+}
+
+const uniqueCategory1 = allCategories1(entries) 
