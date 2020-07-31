@@ -26,6 +26,37 @@ function sortByDate(arrayOfDDMMYYYY) {
 }
 const ListedesVeillesdate = sortBydate(entries.date)
 
+// Fonction de génération de Grid (la variable entries est remplacée par une entriesclassée)
+function insertVeillemodif(ordre) {
+  const ulEl = document.createElement("ul")
+  const gridContainer = document.getElementById("grid-container")
+  ulEl.classList.add("row", "list-unstyled")
+  const filteredEntries = ordre.filter((el) => {
+      if (filterEntries === "toutes les veilles") {
+          return true
+      } else {
+          return el.category(filterEntries)
+      }
+  })
+  for (let veille of filteredEntries) {
+      const li = document.createElement("li")
+      li.classList.add("col-sm-12", "col-lg-12")
+      li.innerHTML = <div class="card mr-5 ml-5 mb-2 shadow-sm bg-white rounded">
+      <div class="card-body">
+          <h5 class="card-title ">${veille.subject}</h5>
+          <a class="badge bg-primary text-decoration-none" href="#" role="button">${veille.category}</a>
+          <p id="date" class=" card-text"><small class="text-muted"></small>${veille.date}</p>
+      </div>
+  </div>
+      ulEl.append(li)
+  }
+  gridContainer.innerHTML = ""
+  gridContainer.append(ulEl)
+}
+
+
+
+
 // Création du bouton dropdown
 const dp = document.createElement("DropdownVeilles")
 DropdownVeilles.innerHTML = document.createElement(`"<div class='dropdown'>
@@ -34,9 +65,9 @@ aria-expanded='false'>
   Trier par :
 </button>
 <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
-  <a class='dropdown-item' href='#' onclick=${maFonctiondate()}>par Date</a>
-  <a class='dropdown-item' href='#' onclick=${maFonctionAZ()>}de A à Z</a>
-  <a class='dropdown-item' href='#" onclick=${maFonction()}>de Z à A</a>
+  <a class='dropdown-item' href='#' onclick=${insertVeillemodif(ListedesVeillesdate)}>par Date</a>
+  <a class='dropdown-item' href='#' onclick=${insertVeillemodif(ListedesVeillesAZ)}de A à Z</a>
+  <a class='dropdown-item' href='#" onclick=${insertVeillemodif(ListedesVeillesZA)}>de Z à A</a>
 </div>
 </div>"`)
 
