@@ -84,3 +84,24 @@ const entries = [
   { subject: "Simplicity", date: "28/09/2020", category: "DEV BC" },
   { subject: "Social Blockchain", date: "30/09/2020", category: "Blockchain" }
 ];
+
+
+function allCategories(list) {
+
+  let listTotal = []
+  for (let element of list) {
+    if ("category" in element) {
+      listTotal = listTotal.concat(element.category)
+    }
+  }
+  const listCategoryUnique = []
+  listTotal.forEach((el) => {
+    if (!listCategoryUnique.includes(el)) {
+ 
+      listCategoryUnique.push(el)
+    }
+  })
+  return listCategoryUnique
+}
+
+const uniqueCategory = allCategories(entries) 
