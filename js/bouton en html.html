@@ -1,0 +1,21 @@
+
+    <div class='dropdown'>
+        <button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true'
+        aria-expanded='false'>
+          Trier par :
+        </button>
+        <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+          <a class='dropdown-item' href='javascript:console.log(entries.sort(function (a, b) {
+
+            a = a.date.split("/");
+            b = b.date.split("/");
+            return a[2] - b[2] || a[1] - b[1] || a[0] - b[0];
+          }))'>par Date</a>
+          <a class='dropdown-item' href='javascript:console.log(entries.sort(function (a, b) {
+            return a.subject - b.subject;
+          }))'>de A à Z</a>
+          <a class='dropdown-item' href='javascript:console.log(entries.sort(function (a, b) {
+            return a.subject - b.subject;
+          }).reverse())'>de Z à A</a>
+        </div>
+        </div>
