@@ -106,11 +106,10 @@ const uniqueCategory = allCategories(entries)
 
 
 function allCategories1(lista) {
-
   let listTotale = []
-  for (let element1 of lista) {
-    if ("date" in element1) {
-      listTotale = listTotale.concat(element1.date)
+  for (let element of lista) {
+    if ("date" in element) {
+      listTotale = listTotale.concat(element.date)
     }
   }
   const listCategoryUnique1 = []

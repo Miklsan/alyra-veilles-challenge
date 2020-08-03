@@ -16,7 +16,9 @@
 </head>
 
 <body>
+    
     <header id="page-header" class="text-center py-5 mb-5">
+        
         <h1>Veilles EthersJs
         </h1>
     </header>
@@ -50,8 +52,8 @@
            
     
     </div> -->
-
-    <div class="input-group mb-3">
+<div>
+    <span class="input-group mb-3">
         <label for="filterCategory" class="input-group-text">
           Catégories
         </label>
@@ -60,9 +62,10 @@
             >Toutes les Veilles</option
           >
         </select>
-      </div>
+    </span>
 
-      <div class="input-group mb-3">
+      <span class="input-group mb-3">
+        <input type="checkbox" id="select" class="form-check-input mr-2">
         <label for="filterDate" class="input-group-text">
           Dates
         </label>
@@ -71,7 +74,8 @@
             >Les Dates</option
           >
         </select>
-      </div>
+    </span>
+</div>
     <div id="grid-container"></div>
    </main>
     <!--charge moment.js pour gérer les formats de dates-->

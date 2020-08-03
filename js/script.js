@@ -17,11 +17,11 @@
     }
     
     activateFilterByCategory() */
-    
-    const dateNow = moment()
-    dateNow.locale("fr")
-    const date = document.getElementById("date")
-    console.log(dateNow)
+
+  
+const dateNow = moment()
+dateNow.locale("fr")
+  
     
     
     let filterEntries = "toutes les veilles"
@@ -58,9 +58,7 @@
     function activateFilterByCategory() {
         const selectCa = document.getElementById("filterCategory")
                uniqueCategory.sort()
-        //console.log(uniqueCategory)
-        //renvoie les 17 différentes catégories
-    
+          
             for (let category of uniqueCategory) {
             const option = document.createElement("option")
             option.textContent = category
@@ -75,26 +73,60 @@
     }
         activateFilterByCategory()
 
-
     function activateFilterByDate() {
-        const selectDa = document.getElementById("filterDate")
-        uniqueCategory1.sort()
+        const selectDat = document.getElementById("filterDate")
+            uniqueCategory1.sort()
 
     
         for (let date of uniqueCategory1) {
             const option = document.createElement("option")
             option.textContent = date
             option.value = date
-            selectDa.append(option)
+            selectDat.append(option)
         }
-        selectDa.addEventListener("change", () => {
-            filterEntries = selectDa.value
+        selectDat.addEventListener("change", () => {
+            filterEntries = selectDat.value
             insertVeille()
-            console.log(filterEntries1)
+            console.log(filterEntries)
         })
     }
-    
     activateFilterByDate()
+
+   /* entries.sort(function (a, b) {
+        if (a.subject < b.subject) { return -1; }
+        if (a.subject > b.subject) { return 1; }
+        return 0;
+      })
+      console.log(entries)
+      insertVeille(
+          entries.sort(function (a, b) {
+              if (a.subject < b.subject) { return -1; }
+              if (a.subject > b.subject) { return 1; }
+              return 0;
+          }))
+    */
+   
+
+    const modeInput = document.getElementById("select");
+
+    modeInput.addEventListener("change", () => { 
+        
+  
+        if (modeInput.checked) { 
+  
+        
+          document.body.classList.add("bg-dark", "text-danger");
+        } else {
+          
+          document.body.classList.remove("bg-dark", "text-danger");
+        }
+      });
+
     
+
+   
+    
+      
+
  
     
