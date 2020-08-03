@@ -24,6 +24,23 @@
 
     </header>
     <main>
+        <div class='dropdown'>
+            <script src="js/veilles.js"></script>
+            <button class='btn btn-secondary dropdown-toggle mb-2' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+              Trier par :
+            </button>
+            <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+              <a class='dropdown-item' href='javascript:insertVeille(entries.sort(function (a, b) {
+      
+                  a = a.date.split("/");
+                  b = b.date.split("/");
+                  return a[2] - b[2] || a[1] - b[1] || a[0] - b[0];
+                }))'>par Date</a>
+              <a class='dropdown-item' href='javascript:insertVeille(entries.sort((a, b) => (a.subject > b.subject ? 1 : -1)))'>de A à Z</a>
+      
+              <a class='dropdown-item' href='javascript:insertVeille(entries.sort((a, b) => (a.subject > b.subject ? -1 : 1)))'>de Z à A</a>
+            </div>
+          </div>
         <div class="input-group  mb-3">
             <label for="filterCategory" class="input-group-text ml-5">
                 Catégories
