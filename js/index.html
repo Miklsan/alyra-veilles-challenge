@@ -12,35 +12,34 @@
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    
 
     <title>Veilles EthersJS</title>
 </head>
 
 <body>
+  
     <header id="page-header" class="text-center py-5 mb-5">
         <h1>Veilles EthersJs
         </h1>
     </header>
-    <main><div class='dropdown'>
-        <button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true'
-        aria-expanded='false'>
-          Trier par :
-        </button>
-        <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
-          <a class='dropdown-item' href='javascript:console.log(entries.sort(function (a, b) {
+    <main>    <div class='dropdown'>
+      <script src="js/veilles.js"></script>
+      <button class='btn btn-secondary dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+        Trier par :
+      </button>
+      <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+        <a class='dropdown-item' href='javascript:console.log(entries.sort(function (a, b) {
 
             a = a.date.split("/");
             b = b.date.split("/");
             return a[2] - b[2] || a[1] - b[1] || a[0] - b[0];
           }))'>par Date</a>
-          <a class='dropdown-item' href='javascript:console.log(entries.sort(function (a, b) {
-            return a.subject - b.subject;
-          }))'>de A à Z</a>
-          <a class='dropdown-item' href='javascript:console.log(entries.sort(function (a, b) {
-            return a.subject - b.subject;
-          }).reverse())'>de Z à A</a>
-        </div>
-        </div>
+        <a class='dropdown-item' href='javascript:console.log(entries.sort((a, b) => (a.subject > b.subject ? 1 : -1)))'>de A à Z</a>
+
+        <a class='dropdown-item' href='javascript:console.log(entries.sort((a, b) => (a.subject > b.subject ? -1 : 1)))'>de Z à A</a>
+      </div>
+    </div>
 
         <div class="card">
             <h5 class="card-title">Titre veille</h5>
